@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link  href="http://fonts.googleapis.com/css?family=Cabin:400,500,600,bold" rel="stylesheet" type="text/css">
+  <link  href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold" rel="stylesheet" type="text/css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <title>Internship</title>
+</head>
+<style>
+  .wrapper {
+    background: url(qwer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .navbar {
+    color: white;
+    font-weight: bold;
+  }
+  .navbar-brand:hover {
+    color: gray;
+  }
+  .nav-link:hover,.nav-item:hover {
+    color: white;
+  }
+  .phonedet {
+    color: white;
+    width:  200px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .phonenum,.phoneicon {
+    display: inline-block;
+  }
+  .phoneicon {
+    background: #a8bbb8;
+    padding: 6px 10px;
+    border-radius: 50%;
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+  .phoneicon:hover {
+    border: 1px solid white;
+    background: transparent;
+    transition: 0.3s;
+  }
+  .headingbox {
+    margin: auto;
+    color: white;
+    width: 45%; 
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30vh;
+    align-items: center;
+  }
+
+  .heading {
+    font-weight: 700;
+  }
+  .videobut {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #0ca27d;
+    width: 130px;
+    display: inline-block;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  .modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .modalcover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(qwer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+  }
+  iframe {
+    z-index: 2;
+  }
+  .btn-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+  }
+
+  .datebox {
+    background: white;
+    /*width: 80%;*/
+    height: 100px;
+    margin: auto;
+    box-shadow:0px 0px 10px black; 
+    margin-bottom: 100px;
+    margin-top: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .dateinput {
+    border: none;
+    width: 80%;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .dateinputbox {
+    width: 20%;
+    border-radius: 50px;
+    background:rgba(228, 228, 231, 0.4);
+    color: gray;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .datebut {
+     background: #0ca27d;
+     border-radius: 50px;
+     padding: 8px;
+     color: white;
+     font-size: 0.9em;
+     width: 20%;
+     text-align: center;
+     cursor: pointer;
+  }
+  .personbox,.personinput {
+    cursor: default;
+  }
+.servicebox {
+  margin-bottom: 100px;
+}
+.servicehead {
+  font-weight: 700;
+  color: #0ea277;
+}
+
+.gallery-cell {
+  width: 40%;
+  height: 350px;
+  margin-right: 30px;
+  background: white;
+  box-shadow:0px 0px 10px gray;
+  cursor: default;
+}
+
+.card-title {
+  font-weight: 700;
+}
+.card-text {
+  color: gray;
+  font-weight: bold;
+}
+.learn:hover {
+  color: black;
+}
+.card-body,.card {
+  height: 100%;
+}
+
+.serveicon {
+  font-size: 100px;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+</style>
+<body>
+<div class="wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hotell</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destination
+            </a>
+            <ul class="dropdown-menu dropend" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Menu One</a></li>
+              <li><a class="dropdown-item" href="#">Menu Two</a></li>
+              <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <li><a class="dropdown-item" href="#">Sub Menu One</a></li>
+                <li><a class="dropdown-item" href="#">Sub Menu Two</a></li>
+                <li><a class="dropdown-item" href="#">Sub Menu Three</a></li> 
+              </ul></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="phonedet">
+          <div class="phoneicon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="phonenum">123-489-9381</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="headingbox">
+    <h1 class="heading">Once a year go someplace you've never been before.</h1>
+    <div class="videobut" data-bs-toggle="modal" data-bs-target="#exampleModal">See video</div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modalcover"></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <iframe width="50%" height="400"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="datebox container">
+  <div class="dateinputbox">
+  <input class="dateinput" type="text" id="datepicker">
+  <i class="fas fa-calendar-alt cal"></i>
+  </div>
+  <div class="dateinputbox">
+  <input class="dateinput" type="text" id="datepicker2">
+  <i class="fas fa-calendar-alt cal"></i>
+  </div>
+  <div class="dateinputbox personbox">
+  <input class="dateinput personinput" list="persons">
+  <datalist id="persons">
+    <option value="#number of person">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+      <option value="5+">
+  </datalist>
+  <i class="fas fa-user-alt cal"></i>
+</div>
+  <div class="datebut">Find Now</div>
+</div>
+
+<div class="servicebox">
+  <div class="container">
+  <h2 class="servicehead">OUR SERVICES</h2>
+</div>
+<div class="gallery js-flickity">
+  <div class="gallery-cell">
+    <div class="card">
+  <div class="card-body">
+    <i class="fas fa-luggage-cart serveicon"></i>
+    <h5 class="card-title">Suitcase</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <span class="learn card-text">LEARN MORE</span>
+  </div>
+</div>
+  </div>
+  <div class="gallery-cell">
+    <div class="card">
+  <div class="card-body">
+    <i class="fas fa-umbrella-beach serveicon"></i>
+    <h5 class="card-title">Island Hoping</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <span class="learn card-text">LEARN MORE</span>
+  </div>
+</div>
+  </div>
+  <div class="gallery-cell">
+    <div class="card">
+  <div class="card-body">
+    <i class="fas fa-globe-americas serveicon"></i>
+    <h5 class="card-title">World Round</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <span class="learn card-text">LEARN MORE</span>
+  </div>
+</div>
+  </div>
+  <div class="gallery-cell">
+    <div class="card">
+  <div class="card-body">
+    <i class="fas fa-plane serveicon"></i>
+    <h5 class="card-title">Travel With Plane</h5>
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+    <span class="learn card-text">LEARN MORE</span>
+  </div>
+</div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+<script>
+ $( function() {
+    $( "#datepicker,#datepicker2" ).datepicker({
+      changeYear: true,
+      changeMonth: true
+    })
+  } );
+ $(".dateinput").val($("#datepicker").val());
+</script>
+
+
+</body>
+</html>
