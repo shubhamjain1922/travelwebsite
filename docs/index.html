@@ -68,6 +68,7 @@
 
   .heading {
     font-weight: 700;
+    text-shadow: 1px 1px white;
   }
   .videobut {
     padding: 10px 20px;
@@ -153,15 +154,8 @@
 .servicehead {
   font-weight: 700;
   color: #0ea277;
-}
-
-.gallery-cell {
-  width: 40%;
-  height: 350px;
-  margin-right: 30px;
-  background: white;
-  box-shadow:0px 0px 10px gray;
-  cursor: default;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px #0ea277;
 }
 
 .card-title {
@@ -171,6 +165,11 @@
   color: gray;
   font-weight: bold;
 }
+.learn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
 .learn:hover {
   color: black;
 }
@@ -179,12 +178,314 @@
 }
 
 .serveicon {
-  font-size: 100px;
+  font-size: 80px;
   margin: 10px;
+  margin-bottom: 30px;
+  color: #0ea277;
+}
+
+.extrabox {
+  position: relative;
+  min-height: 300px;
+  height: 40vw;
+}
+.colorbox {
+  background: #0ea277;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.col-md-3 {
+  padding: 0;
+}
+.introbox {
+  padding: 50px 0;
+  position: relative;
+}
+.introimg {
+  background: url(qwer.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  height: 30vw;
+  width:40vw;
+  position: absolute;
+  right: -100%;
+  top: 5vw;
+  /*margin-right: -20%;*/
+  /*float: left;*/
+}
+.introhead {
+  color: #0ea277;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px #0ea277;
+}
+.introtext {
+  color: gray;
+  float: right;
+  padding: 5vw;
+  width: 50%;
+}
+
+.carousel-cell {
+  width: 40%;
+  margin-right: 30px;
+  background: white;
+  box-shadow:0px 0px 10px gray;
+  cursor: default;
+}
+
+.button-row {
+  margin-top: 80px;
+}
+
+.button {
+  padding: 5px 30px;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow:0px 0px 2px gray;
+  color: black;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button:not(.no-hover):hover {
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+.end {
+  color: gray;
+  cursor: default;
+}
+
+.blogbox {
+  margin-top: 100px;
+}
+
+.blogwrapper {
+  background: #0ea277;
+  position: relative;
+  margin-top: 300px;
+  padding-top: 150px;
+}
+
+.blogcarousel {
+  width: 80%;
+  position: absolute;
+  top: -250px;
+  left: 10%;
+}
+
+.carousel-cell-serve {
+  height: 350px;
+}
+
+.carousel-cell-blog {
+  width: 32%;
+  height: 350px;
+}
+
+.blogbutton {
+  text-align: center;
+}
+
+.servicebutton {
+  margin-top: 80px;
+}
+
+.blogbut {
+  box-shadow:0px 0px 2px black;
+}
+
+.card-img-top-blog {
+  height: 400px;
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.blogcontent {
+  margin-top: 50px;
+  padding-top: 20px;
+}
+.bloghead {
+  font-weight: 700;
+  text-shadow: 1px 1px black;
+}
+
+.blogq {
+  background: #0ea277;
+  border-bottom: 0.1px solid #0d976f;
+  box-shadow:0.1px 0.1px #0d976f;
+  float: right;
+  width: 80%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.down {
+  float: right;
+}
+.q {
+  display: inline-block;
+}
+
+.bloga {
+  display: none;
+  background: #0d976f;
+  padding: 10px;
+  cursor: default;
+}
+
+.card-body {
+  position: relative;
+  padding-top: 30px;
+}
+
+.iconbox {
+  border-radius: 50%;
+  padding: 10px;
+  background: #0ea277;
+  width: 45px;
+  text-align: center;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -22px;
+  color: white;
+  box-shadow: 0px 0px 1px black;
+}
+
+.testbox {
+  padding: 10px;
+  margin-top: 100px;
+}
+
+.testtext {
+  color: gray;
+}
+
+.testcarousel {
+  width: 80%;
+  margin: auto;
+}
+
+.testbutton {
+  text-align: center;
+  margin-top: 50px;
+}
+.testp {
+  margin-top: 10px;
+}
+
+.testiconbox {
+  border-radius: 50%;
+  padding: 10px;
+  background: #0ea277;
+  width: 45px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -50px;
+  color: white;
+  box-shadow: 0px 0px 1px black;
+}
+
+.testperson {
+  margin-top: 20px;
+}
+
+.testimg {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: url(qwer.jpg);
+  display: inline-block;
+}
+
+.testname {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.testpos {
+  margin-top: 0px;
+}
+
+.testcard {
+  padding-bottom: 20px;
+}
+
+.carousel-cell-test {
+  padding-top: 20px;
+  width: 32%;
+  box-shadow: none;
+}
+
+.testhead {
   margin-bottom: 50px;
 }
-.flickity-page-dots {
-  display: none;
+
+.testbutton {
+  margin-top: 50px;
+}
+
+.instacarousel {
+  width: 100%;
+}
+
+.carousel-cell-insta {
+  width: 20%;
+  height: 200px;
+  box-shadow: none;
+  margin: 0;
+}
+
+.instabox {
+  height: 100%;
+  width: 100%;
+  background: url(qwer.jpg);
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: default;
+}
+
+@media (max-width: 1050px) {
+  .carousel-cell-blog {
+  width: 50%;
+}
+.carousel-cell-test {
+  width: 50%;
+}
+}
+
+@media (max-width: 768px) {
+  .colorbox {
+  width: 40%;
+}
+.introimg {
+  right: -50%;
+}
+.carousel-cell {
+  width: 80%;
+}
+
+.bloghead {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.blogq {
+  float: none;
+  margin: auto;
+}
 }
 </style>
 <body>
@@ -280,51 +581,315 @@
 
 <div class="servicebox">
   <div class="container">
-  <h2 class="servicehead">OUR SERVICES</h2>
+    <h2 class="servicehead">OUR SERVICES</h2>
+    <div class="carousel">
+      <div class="carousel-cell 1 carousel-cell-serve">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-luggage-cart serveicon"></i>
+            <h5 class="card-title">Suitcase</h5>
+            <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <span class="learn card-text">LEARN MORE</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell 2 carousel-cell-serve">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-umbrella-beach serveicon"></i>
+            <h5 class="card-title">Island Hoping</h5>
+            <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <span class="learn card-text">LEARN MORE</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell 3 carousel-cell-serve">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-globe-americas serveicon"></i>
+            <h5 class="card-title">World Round</h5>
+            <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <span class="learn card-text">LEARN MORE</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell 4 carousel-cell-serve">
+        <div class="card">
+          <div class="card-body">
+            <i class="fas fa-plane serveicon"></i>
+            <h5 class="card-title">Travel With Plane</h5>
+            <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <span class="learn card-text">LEARN MORE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="servicebutton">
+  <div class="button button--previous">Prev</div>
+  <div class="button button--next">Next</div>
 </div>
-<div class="gallery js-flickity">
-  <div class="gallery-cell">
-    <div class="card">
-  <div class="card-body">
-    <i class="fas fa-luggage-cart serveicon"></i>
-    <h5 class="card-title">Suitcase</h5>
-    <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <span class="learn card-text">LEARN MORE</span>
   </div>
 </div>
-  </div>
-  <div class="gallery-cell">
-    <div class="card">
-  <div class="card-body">
-    <i class="fas fa-umbrella-beach serveicon"></i>
-    <h5 class="card-title">Island Hoping</h5>
-    <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <span class="learn card-text">LEARN MORE</span>
-  </div>
-</div>
-  </div>
-  <div class="gallery-cell">
-    <div class="card">
-  <div class="card-body">
-    <i class="fas fa-globe-americas serveicon"></i>
-    <h5 class="card-title">World Round</h5>
-    <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <span class="learn card-text">LEARN MORE</span>
-  </div>
-</div>
-  </div>
-  <div class="gallery-cell">
-    <div class="card">
-  <div class="card-body">
-    <i class="fas fa-plane serveicon"></i>
-    <h5 class="card-title">Travel With Plane</h5>
-    <p class="card-text">Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-    <span class="learn card-text">LEARN MORE</span>
-  </div>
-</div>
-  </div>
 
+<div class="container-fluid introwrapper">
+  <div class="row">
+    <div class="col-md-3 extrabox">
+      <div class="colorbox">
+        <div class="introimg"></div>
+      </div>
+      
+    </div>
+    <div class="col-md-9 introbox">
+      
+      <div class="introtext">
+        <h3 class="introhead">About Hotell</h3>
+        <p>Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they lives in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        <br>
+        <br>
+        A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
+<div class="blogbox">
+  <div class="container-fluid">
+    <div class="container">
+    <h2 class="servicehead">BLOG POSTS</h2>
+    </div>
+    <div class="blogwrapper">
+
+      <div class="carousel blogcarousel">
+        <div class="carousel-cell 1 carousel-cell-blog">
+          <div class="card">
+            <div class="card-img-top-blog" style="background: url(qwer.jpg);"></div>
+            <div class="card-body">
+              <div class="iconbox">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <h5 class="card-title">Far far away, behind the mountains, far from the countries</h5>
+              <span class="learn card-text">READ MORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 2 carousel-cell-blog">
+          <div class="card">
+            <div class="card-img-top-blog" style="background: url(img2.jpg);"></div>
+            <div class="card-body">
+              <div class="iconbox">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <h5 class="card-title">Far far away, behind the mountains, far from the countries</h5>
+              <span class="learn card-text">READ MORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 3 carousel-cell-blog">
+          <div class="card">
+            <div class="card-img-top-blog" style="background: url(img4.jpg);"></div>
+            <div class="card-body">
+              <div class="iconbox">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <h5 class="card-title">Far far away, behind the mountains, far from the countries</h5>
+              <span class="learn card-text">READ MORE</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-blog">
+          <div class="card">
+            <div class="card-img-top-blog" style="background: url(img1.jpg);"></div>
+            <div class="card-body">
+              <div class="iconbox">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <h5 class="card-title">Far far away, behind the mountains, far from the countries</h5>
+              <span class="learn card-text">READ MORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blogbutton">
+        <div class="button blogbut button--previous">Prev</div>
+        <div class="button blogbut button--next">Next</div>
+      </div>
+
+      <div class="container blogcontent">
+        <div class="row">
+          <div class="col-md-3">
+            <h2 class="bloghead">FREQUENTLY ASKED QUESTIONS</h2>
+          </div>
+          <div class="col-md-9">
+            <div class="blogq 1q">
+              <h5 class="q">Is it free?</h5>
+              <i class="fas fa-chevron-down down"></i>
+              <div class="bloga 1a">
+                <p>Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they lives in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                  <br>
+                  <br>
+                  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                </p>
+              </div>
+            </div>
+            <div class="blogq 2q">
+              <h5 class="q">How to install this template?</h5>
+              <i class="fas fa-chevron-down down"></i>
+              <div class="bloga 2a">
+                <p>Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they lives in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                  <br>
+                  <br>
+                  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                </p>
+              </div>
+            </div>
+            <div class="blogq 3q">
+              <h5 class="q">Wher can I get help?</h5>
+              <i class="fas fa-chevron-down down"></i>
+              <div class="bloga 3a">
+                <p>Far far away, behind the mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they lives in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                  <br>
+                  <br>
+                  A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="testbox">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 testhead">
+      <h2 class="servicehead">TESTIMONIALS</h2>
+      </div>
+      <div class="col-md-8 testtext">
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      </div>
+      </div>
+
+      <div class="carousel testcarousel">
+        <div class="carousel-cell 1 carousel-cell-test">
+          <div class="card">
+            <div class="card-body testcard">
+              <div class="testiconbox">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <div class="testperson container-fluid">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
+                <p class="card-text testp testpos">Creative Director</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 2 carousel-cell-test">
+          <div class="card">
+            <div class="card-body testcard">
+              <div class="testiconbox">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <div class="testperson container-fluid">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
+                <p class="card-text testp testpos">Creative Director</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 3 carousel-cell-test">
+          <div class="card">
+            <div class="card-body testcard">
+              <div class="testiconbox">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <div class="testperson container-fluid">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
+                <p class="card-text testp testpos">Creative Director</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-test">
+          <div class="card">
+            <div class="card-body testcard">
+              <div class="testiconbox">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+              <div class="testperson container-fluid">
+                <div class="row">
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
+                <p class="card-text testp testpos">Creative Director</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testbutton">
+        <div class="button blogbut button--previous">Prev</div>
+        <div class="button blogbut button--next">Next</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testbox">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+      <h2 class="servicehead">INSTAGRAM</h2>
+      </div>
+      <div class="col-md-8 testtext">
+        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      </div>
+      </div>
+
+      <div class="carousel instacarousel">
+        <div class="carousel-cell 1 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 2 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 3 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+        <div class="carousel-cell 4 carousel-cell-insta">
+          <div class="instabox"></div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -338,6 +903,66 @@
     })
   } );
  $(".dateinput").val($("#datepicker").val());
+// external js: flickity.pkgd.js
+
+var $carouselinsta = $('.instacarousel').flickity({
+  prevNextButtons: false,
+  pageDots: false,
+  autoPlay: 2000,
+  wrapAround: true
+});
+var $carousel = $('.carousel').flickity({
+  prevNextButtons: false,
+  pageDots: false,
+});
+
+
+
+$('.button--previous').on( 'click', function() {
+  $carousel.flickity('previous');
+  check()
+});
+
+$('.button--next').on( 'click', function() {
+  $carousel.flickity('next');
+  check()
+});
+check()
+function check() {
+  var a=$(".is-selected");
+  var temp=$(a).attr("class").split(" ")[1];
+  if(temp==1)
+  {
+    $('.button--previous').addClass("end");
+    $('.button--previous').addClass('no-hover');
+  }
+  else
+  {
+    $('.button--previous').removeClass("end");
+    $('.button--previous').removeClass('no-hover');
+  }
+  if(temp==4)
+  {
+    $('.button--next').addClass("end");
+    $('.button--next').addClass('no-hover');
+  }
+  else
+  {
+    $('.button--next').removeClass("end");
+    $('.button--next').removeClass('no-hover');
+  }
+}
+
+$(".blogq").click(function(){
+$(".bloga").slideUp();
+var a= $(this).attr("class").split(" ")[1][0];
+$("."+a+"a").slideDown();
+})
+$(".3a").slideDown();
+
+
+
+
 </script>
 
 
