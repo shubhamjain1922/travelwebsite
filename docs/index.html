@@ -212,8 +212,6 @@
   position: absolute;
   right: -100%;
   top: 5vw;
-  /*margin-right: -20%;*/
-  /*float: left;*/
 }
 .introhead {
   color: #0ea277;
@@ -427,7 +425,7 @@
 }
 
 .testhead {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .testbutton {
@@ -449,11 +447,44 @@
 .instabox {
   height: 100%;
   width: 100%;
-  background: url(qwer.jpg);
-   background-repeat: no-repeat;
+    float: left;
+}
+
+.insta1 {
+  background: url(img1.jpg);
+  background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    float: left;
+}
+.insta2 {
+  background: url(img2.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.insta3 {
+  background: url(img3.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.insta4 {
+  background: url(img4.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.insta5 {
+  background: url(img2.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.insta6{
+  background: url(img3.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .hoverbox {
@@ -530,6 +561,10 @@
   display: inline-block;
   cursor: pointer;
 
+}
+
+.headwrapper {
+  margin-bottom: 50px;
 }
 
 .connectbox:hover {
@@ -659,7 +694,7 @@
 <div class="servicebox">
   <div class="container">
     <h2 class="servicehead">OUR SERVICES</h2>
-    <div class="carousel">
+    <div class="carousel servecarousel">
       <div class="carousel-cell 1 carousel-cell-serve">
         <div class="card">
           <div class="card-body">
@@ -702,8 +737,8 @@
       </div>
     </div>
     <div class="servicebutton">
-  <div class="button button--previous">Prev</div>
-  <div class="button button--next">Next</div>
+  <div class="button servebut button--previous serve_p">Prev</div>
+  <div class="button servebut button--next serve_n">Next</div>
 </div>
   </div>
 </div>
@@ -787,8 +822,8 @@
         </div>
       </div>
       <div class="blogbutton">
-        <div class="button blogbut button--previous">Prev</div>
-        <div class="button blogbut button--next">Next</div>
+        <div class="button blogbut button--previous blog_p">Prev</div>
+        <div class="button blogbut button--next blog_n">Next</div>
       </div>
 
       <div class="container blogcontent">
@@ -921,8 +956,8 @@
         </div>
       </div>
       <div class="testbutton">
-        <div class="button blogbut button--previous">Prev</div>
-        <div class="button blogbut button--next">Next</div>
+        <div class="button blogbut button--previous test_p">Prev</div>
+        <div class="button blogbut button--next test_n">Next</div>
       </div>
     </div>
   </div>
@@ -931,7 +966,7 @@
 <div class="testbox">
   <div class="container-fluid">
     <div class="container">
-      <div class="row">
+      <div class="row headwrapper">
         <div class="col-md-4 testhead">
       <h2 class="servicehead">INSTAGRAM</h2>
       </div>
@@ -942,43 +977,37 @@
 
       <div class="carousel instacarousel">
         <div class="carousel-cell 1 carousel-cell-insta">
-          <div class="instabox"></div>
+          <div class="instabox insta1"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
         </div>
         <div class="carousel-cell 2 carousel-cell-insta">
-          <div class="instabox"></div>
+          <div class="instabox insta2"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
         </div>
         <div class="carousel-cell 3 carousel-cell-insta">
-          <div class="instabox"></div>
+          <div class="instabox insta3"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
         </div>
         <div class="carousel-cell 4 carousel-cell-insta">
-          <div class="instabox"></div>
+          <div class="instabox insta4"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
         </div>
-        <div class="carousel-cell 4 carousel-cell-insta">
-          <div class="instabox"></div>
+        <div class="carousel-cell 5 carousel-cell-insta">
+          <div class="instabox insta5"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
         </div>
-        <div class="carousel-cell 4 carousel-cell-insta">
-          <div class="instabox"></div>
-          <div class="hoverbox">
-            <i class="fab fa-instagram insta"></i>
-          </div>
-        </div>
-        <div class="carousel-cell 4 carousel-cell-insta">
-          <div class="instabox"></div>
+        <div class="carousel-cell 6 carousel-cell-insta">
+          <div class="instabox insta6"></div>
           <div class="hoverbox">
             <i class="fab fa-instagram insta"></i>
           </div>
@@ -1058,51 +1087,81 @@
  $(".dateinput").val($("#datepicker").val());
 
 
-var $carouselinsta = $('.instacarousel').flickity({
+var instacarousel = $('.instacarousel').flickity({
   prevNextButtons: false,
   pageDots: false,
   autoPlay: 2000,
   wrapAround: true,
 });
-var $carousel = $('.carousel').flickity({
+var servecarousel = $('.servecarousel').flickity({
   prevNextButtons: false,
   pageDots: false,
 });
 
+var testcarousel = $('.testcarousel').flickity({
+  prevNextButtons: false,
+  pageDots: false,
+});
 
+var blogcarousel = $('.blogcarousel').flickity({
+  prevNextButtons: false,
+  pageDots: false,
+});
+
+check("test");
+check("blog");
+check("serve");
 
 $('.button--previous').on( 'click', function() {
-  $carousel.flickity('previous');
-  check()
+  var temp=$(this).attr("class").split(" ")[3].split("_")[0];
+  if(temp==='serve'){
+  servecarousel.flickity('previous');
+  }
+  else if(temp==='blog'){
+  blogcarousel.flickity('previous');
+  }
+  else if(temp==='test'){
+  testcarousel.flickity('previous');
+  }
+  check(temp);
 });
 
 $('.button--next').on( 'click', function() {
-  $carousel.flickity('next');
-  check()
+  var temp=$(this).attr("class").split(" ")[3].split("_")[0];
+  if(temp==='serve'){
+  servecarousel.flickity('next');
+  }
+  else if(temp==='blog'){
+  blogcarousel.flickity('next');
+  }
+  else if(temp==='test'){
+  testcarousel.flickity('next');
+  }
+  check(temp);
 });
-check()
-function check() {
-  var a=$(".is-selected");
+
+function check(pa) {
+  var a=$("."+pa+"carousel .is-selected");
   var temp=$(a).attr("class").split(" ")[1];
   if(temp==1)
   {
-    $('.button--previous').addClass("end");
-    $('.button--previous').addClass('no-hover');
+    $("."+pa+"_p").addClass("end");
+    $("."+pa+"_p").addClass('no-hover');
   }
   else
   {
-    $('.button--previous').removeClass("end");
-    $('.button--previous').removeClass('no-hover');
+    $("."+pa+"_p").removeClass("end");
+    $("."+pa+"_p").removeClass('no-hover');
   }
   if(temp==4)
   {
-    $('.button--next').addClass("end");
-    $('.button--next').addClass('no-hover');
+    $("."+pa+"_n").addClass("end");
+    $("."+pa+"_n").addClass('no-hover');
   }
   else
   {
-    $('.button--next').removeClass("end");
-    $('.button--next').removeClass('no-hover');
+    $("."+pa+"_n").removeClass("end");
+    $("."+pa+"_n").removeClass('no-hover');
   }
 }
 
