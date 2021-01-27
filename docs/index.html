@@ -22,14 +22,24 @@
     background-position: center;
     height: 100vh;
     width: 100%;
+    padding-bottom: 50px;
   }
 
-  .navbar {
+  .navbar,.navbar-brand {
     color: white;
     font-weight: bold;
   }
   .navbar-brand:hover {
-    color: gray;
+    color: #ebebeb;
+  }
+  .nav-link {
+    color: #e1e2e2;
+  }
+  .active {
+    color: white;
+  }
+  .dropdown-item:hover {
+    color: #0ca27d;
   }
   .nav-link:hover,.nav-item:hover {
     color: white;
@@ -108,15 +118,17 @@
 
   .datebox {
     background: white;
-    /*width: 80%;*/
-    height: 100px;
+    padding: 20px 20px;
+    padding-bottom: 0;
     margin: auto;
     box-shadow:0px 0px 10px black; 
     margin-bottom: 100px;
     margin-top: -30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  }
+
+  .dateinputbox {
+    display: inline-block;
+    width: 45%;
   }
 
   .dateinput {
@@ -126,12 +138,55 @@
     cursor: pointer;
   }
 
+  .dateselect {
+    border: 1px solid;
+  }
+
+  .ui-datepicker-header {
+    background-color: white !important;
+    background-image: none !important;
+    border: none;
+}
+
+.ui-datepicker-month,.ui-datepicker-year {
+  border: none;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 30%;
+}
+
+.ui-widget-content .ui-state-default {
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.ui-state-default:hover {
+  background: gray;
+}
+.ui-state-active {
+  background: #007fff!important;
+  color: white;
+}
+
   .dateinputbox {
-    width: 20%;
+    width: 45%;
     border-radius: 50px;
     background:rgba(228, 228, 231, 0.4);
     color: gray;
     padding: 10px;
+  }
+
+  .datewrapper {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .dateinput {
     cursor: pointer;
   }
 
@@ -141,7 +196,7 @@
      padding: 8px;
      color: white;
      font-size: 0.9em;
-     width: 20%;
+     width: 45%;
      text-align: center;
      cursor: pointer;
   }
@@ -186,7 +241,6 @@
 
 .extrabox {
   position: relative;
-  min-height: 300px;
   height: 40vw;
 }
 .colorbox {
@@ -268,6 +322,7 @@
   position: relative;
   margin-top: 300px;
   padding-top: 150px;
+  padding-bottom: 20px;
 }
 
 .blogcarousel {
@@ -450,25 +505,25 @@
     float: left;
 }
 
-.insta1 {
+.insta1,.blog1 {
   background: url(img1.jpg);
   background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.insta2 {
+.insta2,.blog2 {
   background: url(img2.jpg);
   background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.insta3 {
+.insta3,.blog3 {
   background: url(img3.jpg);
   background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.insta4 {
+.insta4,.blog4 {
   background: url(img4.jpg);
   background-repeat: no-repeat;
     background-size: cover;
@@ -482,6 +537,39 @@
 }
 .insta6{
   background: url(img3.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.insta6{
+  background: url(img3.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.test1{
+  background: url(test1.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.test2{
+  background: url(test2.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.test3{
+  background: url(test3.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.test4{
+  background: url(test4.jpg);
   background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -540,7 +628,9 @@
   font-size: 1.1em;
   font-weight: 600;
 }
-
+*:focus {
+      outline: none;
+    }
 .address {
   cursor: text;
 }
@@ -579,7 +669,19 @@
 }
 }
 
+@media(min-width: 770px) and (max-width: 991px) {
+  .carousel-cell-serve {
+  width: 50%;
+}
+.phonedet {
+    position: relative;
+  }
+}
+
 @media (max-width: 768px) {
+  .phonedet {
+    position: relative;
+  }
   .colorbox {
   width: 40%;
 }
@@ -602,7 +704,7 @@
 </style>
 <body>
 <div class="wrapper">
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">Hotell</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -668,15 +770,19 @@
 </div>
 
 <div class="datebox container">
-  <div class="dateinputbox">
-  <input class="dateinput" type="text" id="datepicker" placeholder="2021-01-26">
+  <div class="row">
+    <div class="col-md-6 datewrapper">
+      <div class="dateinputbox">
+  <input class="dateinput date" type="text" id="datepicker">
   <i class="fas fa-calendar-alt cal"></i>
   </div>
   <div class="dateinputbox">
-  <input class="dateinput" type="text" id="datepicker2" placeholder="2021-01-26">
+  <input class="dateinput date" type="text" id="datepicker2">
   <i class="fas fa-calendar-alt cal"></i>
   </div>
-  <div class="dateinputbox personbox">
+    </div>
+    <div class="col-md-6 datewrapper">
+      <div class="dateinputbox personbox">
   <input class="dateinput personinput" list="persons" placeholder="1">
   <datalist id="persons">
     <option value="#number of person">
@@ -690,6 +796,8 @@
 </div>
   <div class="datebut">Find Now</div>
 </div>
+    </div>
+  </div>
 
 <div class="servicebox">
   <div class="container">
@@ -767,14 +875,14 @@
 <div class="blogbox">
   <div class="container-fluid">
     <div class="container">
-    <h2 class="servicehead">BLOG POSTS</h2>
+    <h2 class="servicehead" style="margin-left: 5px;">BLOG POSTS</h2>
     </div>
     <div class="blogwrapper">
 
       <div class="carousel blogcarousel">
         <div class="carousel-cell 1 carousel-cell-blog">
           <div class="card">
-            <div class="card-img-top-blog" style="background: url(qwer.jpg);"></div>
+            <div class="card-img-top-blog blog1"></div>
             <div class="card-body">
               <div class="iconbox">
                 <i class="fas fa-pencil-alt"></i>
@@ -786,7 +894,7 @@
         </div>
         <div class="carousel-cell 2 carousel-cell-blog">
           <div class="card">
-            <div class="card-img-top-blog" style="background: url(img2.jpg);"></div>
+            <div class="card-img-top-blog blog2"></div>
             <div class="card-body">
               <div class="iconbox">
                 <i class="fas fa-pencil-alt"></i>
@@ -798,7 +906,7 @@
         </div>
         <div class="carousel-cell 3 carousel-cell-blog">
           <div class="card">
-            <div class="card-img-top-blog" style="background: url(img4.jpg);"></div>
+            <div class="card-img-top-blog blog3"></div>
             <div class="card-body">
               <div class="iconbox">
                 <i class="fas fa-pencil-alt"></i>
@@ -810,7 +918,7 @@
         </div>
         <div class="carousel-cell 4 carousel-cell-blog">
           <div class="card">
-            <div class="card-img-top-blog" style="background: url(img1.jpg);"></div>
+            <div class="card-img-top-blog blog4"></div>
             <div class="card-body">
               <div class="iconbox">
                 <i class="fas fa-pencil-alt"></i>
@@ -895,7 +1003,7 @@
               <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
               <div class="testperson container-fluid">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg test1"></div></div>
                   <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
                 <p class="card-text testp testpos">Creative Director</p></div>
                 </div>
@@ -912,7 +1020,7 @@
               <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
               <div class="testperson container-fluid">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg test2"></div></div>
                   <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
                 <p class="card-text testp testpos">Creative Director</p></div>
                 </div>
@@ -929,7 +1037,7 @@
               <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
               <div class="testperson container-fluid">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg test3"></div></div>
                   <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
                 <p class="card-text testp testpos">Creative Director</p></div>
                 </div>
@@ -946,7 +1054,7 @@
               <p class="card-text testp">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
               <div class="testperson container-fluid">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg"></div></div>
+                  <div class="col-md-4 col-sm-4 col-xs-4"><div class="testimg test4"></div></div>
                   <div class="col-md-8 col-sm-8 col-xs-8"><h5 class="testname">John Doe</h5>
                 <p class="card-text testp testpos">Creative Director</p></div>
                 </div>
@@ -1084,8 +1192,10 @@
       changeMonth: true
     })
   } );
- $(".dateinput").val($("#datepicker").val());
-
+ $(".date").datepicker({
+      changeYear: true,
+      changeMonth: true
+    }).datepicker("setDate", new Date());
 
 var instacarousel = $('.instacarousel').flickity({
   prevNextButtons: false,
@@ -1172,7 +1282,12 @@ $("."+a+"a").slideDown();
 })
 $(".3a").slideDown();
 
-
+$(".dateinput").click(function(){
+  $(this).parent().addClass("dateselect")
+})
+$(".dateinput").mouseleave(function(){
+  $(this).parent().removeClass("dateselect")
+})
 
 
 </script>
